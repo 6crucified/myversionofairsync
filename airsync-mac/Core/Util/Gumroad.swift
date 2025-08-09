@@ -1,4 +1,3 @@
-//
 //  Gumroad.swift
 //  airsync-mac
 //
@@ -8,19 +7,8 @@
 import Foundation
 
 func checkLicenseKeyValidity(key: String) async throws -> Bool {
-    if key == "i-am-a-tester" {
-        AppState.shared.setPlusTemporarily(true)
-        AppState.shared.licenseDetails = LicenseDetails(
-            key: key,
-            email: "tester@example.com",
-            productName: "Test Mode",
-            orderNumber: 0,
-            purchaserID: "tester"
-        )
-        return true
-    }
-
-    let productID = "smrIThhDxoQI33gQm3wwxw=="
+    // Production licensing path; test bypass removed
+    let productID = GumroadConfig.productID
     let url = URL(string: "https://api.gumroad.com/v2/licenses/verify")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
