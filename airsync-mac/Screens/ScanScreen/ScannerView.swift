@@ -67,7 +67,7 @@ struct ScannerView: View {
                 }
                 .padding()
                 .background(.clear)
-                .glassEffect(in: .rect(cornerRadius: 20))
+                .glassEffect(in: RectangleShape.rect(cornerRadius: 20))
                 .padding()
             } else {
                 Label {

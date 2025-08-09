@@ -21,8 +21,7 @@ struct GlassBoxView: View {
                 .fill(color)
                 .frame(width: width, height: height)
                 .frame(maxWidth: maxWidth, maxHeight: maxHeight)
-                .glassEffect(in: .rect(cornerRadius: radius))
-                .cornerRadius(radius)
+                .glassEffect(in: RectangleShape.rect(cornerRadius: radius))
         } else {
             Rectangle()
                 .fill(color)
