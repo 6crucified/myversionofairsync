@@ -58,7 +58,7 @@ extension View {
     @ViewBuilder
     func applyGlassIfAvailable() -> some View {
         if #available(macOS 26.0, *) {
-            self.buttonStyle(.glass)
+            self.buttonStyle(.bordered)
         } else {
             self.buttonStyle(.borderedProminent)
         }

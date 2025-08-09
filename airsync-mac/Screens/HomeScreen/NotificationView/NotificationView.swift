@@ -71,6 +71,8 @@ extension View {
     func applyGlassViewIfAvailable() -> some View {
         if #available(macOS 26.0, *) {
             self.glassEffect(in: .rect(cornerRadius: 20))
+        } else {
+            self
         }
     }
 }
