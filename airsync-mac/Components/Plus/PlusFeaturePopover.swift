@@ -22,7 +22,7 @@ struct PlusFeaturePopover: View {
                     Button("See more") {
                         AppState.shared.selectedTab = .settings
                     }
-                    .buttonStyle(.glass)
+                    .buttonStyle(GlassButtonStyle.glass)
                 } else {
                     Button("See more") {
                         AppState.shared.selectedTab = .settings

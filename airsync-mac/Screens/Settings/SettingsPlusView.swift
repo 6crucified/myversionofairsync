@@ -45,7 +45,7 @@ struct SettingsPlusView: View {
                     .disabled(
                         licenseKey.isEmpty || isCheckingLicense
                     )
-                    .buttonStyle(.glass)
+                    .buttonStyle(GlassButtonStyle.glass)
                     .controlSize(.large)
                 } else {
                     Button("Check License") {
@@ -62,6 +62,8 @@ struct SettingsPlusView: View {
                     .disabled(
                         licenseKey.isEmpty || isCheckingLicense
                     )
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
                 }
 
 
